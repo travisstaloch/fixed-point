@@ -15,7 +15,7 @@ pub fn FixedPointAdvanced(
     );
 }
 
-/// FixedPoint
+/// a FixedPoint() type able to represent values between min and max
 pub fn FixedPointFittingRange(
     comptime min: comptime_float,
     comptime max: comptime_float,
@@ -322,8 +322,7 @@ pub fn FixedPoint(
             const whole = uint / fraction_max;
             const wl = digitsLenBase10(UInt, whole);
             const whole_len: Len = if (larger_than_len) @truncate(wl) else wl;
-            const fraction = uint % fraction_max;
-            _ = fraction; // autofix
+            // const fraction = uint % fraction_max;
             var frac_len: Len = len - whole_len;
             // log(
             //     "format({}) uint/len {}/{} whole/len {}/{} frac/len {}/{} prec {}",
