@@ -1,12 +1,9 @@
 .{
-    .name = "fixed-point",
-
+    .name = .fixed_point,
     .version = "0.0.0",
-
     //.minimum_zig_version = "0.11.0",
-
     .dependencies = .{},
-
+    .fingerprint = 0xdec2dbd248b73a7a,
     .paths = .{
         "build.zig",
         "build.zig.zon",
